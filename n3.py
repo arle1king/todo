@@ -184,5 +184,28 @@ def descifrar_codigo_cesar(texto_cifrado: str, corrimiento: int)->str:
             texto+=caracter
     return texto
 
-hbcjbj
-gccyjvc
+def descifrar_codigo_cesar(texto_cifrado: str, corrimiento: int)->str:
+    """ Descifrar código César
+    Parámetros:
+      texto_cifrado (str): El texto cifrado que se quiere descifrar. Puede incluir minúsculas, mayúsculas,
+                           espacios y otros caracteres especiales. Sólo tendrá letras del alfabeto inglés.
+      corrimiento (int): El corrimiento (cantidad de lugares que se corre una letra) que se usó para generar
+                         el cifrado, y por ende debe usarse para descrifar el mensaje
+    Retorno:
+      str: La cadena descifrada, incluyendo espacios y caracteres especiales que tenía la original.
+    """
+    texto=""
+    for caracter in texto_cifrado:
+        if ord(caracter) in range(97,123):
+            if ord(caracter)-corrimiento<97:
+                texto+=chr(ord(caracter)-corrimiento+26)
+            else:
+                texto+=chr(ord(caracter)-corrimiento)
+        elif ord(caracter) in range(65,91):
+            if ord(caracter)-corrimiento<65:
+                texto+=chr(ord(caracter)-corrimiento+26)
+            else:
+                texto+=chr(ord(caracter)-corrimiento)
+        else:
+            texto+=caracter
+    return texto
