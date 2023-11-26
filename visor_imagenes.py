@@ -54,3 +54,5 @@ def binarizar_imagen(imagen: list, umbral: float)->list:
     return imagen
 
 
+chdvtcnvcv
+cngbn
