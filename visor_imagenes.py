@@ -11,7 +11,6 @@ Temas:
 import matplotlib.image as mpimg
 import matplotlib.pyplot as plt
 
-
 def cargar_imagen(ruta_imagen: str)-> list:
     """ Carga la imagen que se encuentra en la ruta dada.
     Parámetros:
